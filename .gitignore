@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/ybf
+ybf.so
+ybf.dylib
+ybf.dll
+ybf.a
+ybf.lib
+ybf-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
