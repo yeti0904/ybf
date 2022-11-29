@@ -5,6 +5,10 @@ import std.string;
 import core.stdc.stdlib;
 import interpreter;
 
+const string usage = `
+Usage: ybf [FILE] [--cs/--cell-size cellAmount]
+`;
+
 void main(string[] args) {
 	string      inputFile = "";
 	Interpreter bf = new Interpreter();
@@ -27,6 +31,11 @@ void main(string[] args) {
 
 					cellsSize = parse!int(args[i]);
 					break;
+				}
+				case "-h":
+				case "--help": {
+					writeln(usage);
+					exit(0);
 				}
 				default: {
 					stderr.writefln("Unrecognised parameter: %s", args[i]);
